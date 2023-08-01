@@ -1,0 +1,21 @@
+.notificationBar {
+  text-align: center;
+
+  width: 100%;
+  height: 24px;
+}
+
+.notificationBarContent {
+  font-size: 10px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin: 0;
+
+  background-color: #353535;
+}
+
+@media (min-width: 1024px) {
+  .notificationBarContent {
+    font-size: 12px;
+  }   
+}
