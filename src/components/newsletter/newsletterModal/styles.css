@@ -1,0 +1,27 @@
+.news_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.news__left-col {
+  display: flex;
+}
+
+.news__right-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+@media (max-width: 475px) {
+  .news_container {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}

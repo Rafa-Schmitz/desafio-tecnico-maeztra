@@ -1,6 +1,6 @@
 import { createStyles, getStylesRef, rem } from "@mantine/core";
 
-export const useShelfStyles = createStyles(() => ({
+export const useShelfStyles = createStyles((theme) => ({
   price: {
     color: "#353535",
     fontSize: 20,
@@ -57,8 +57,14 @@ export const useShelfStyles = createStyles(() => ({
   },
 
   tipBar: {
-    padding: "0 0 0 31px",
+    padding: "0 20px",
+    [theme.fn.smallerThan("md")]: {
+      padding: "0 0 0 31px",
+    },
     userSelect: "none",
+    maxWidth: "1600px",
+    margin: "0 auto",
+    boxSizing: "border-box",
   },
 
   swatches: {

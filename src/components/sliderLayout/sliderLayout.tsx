@@ -81,6 +81,7 @@ export const SliderLayout = () => {
       previousControlIcon={<img src={prevCaret} />}
       nextControlIcon={<img src={nextCaret} />}
       classNames={{ control: classes.carets }}
+      controlsOffset={100}
     >
       {slides}
     </Carousel>

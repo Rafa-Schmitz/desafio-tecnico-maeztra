@@ -4,17 +4,23 @@ export const useInfoCardStyles = createStyles((theme) => ({
   wrapper: {
     display: "flex",
     alignItems: "center",
-    padding: `calc(${theme.spacing.xl} * 2)`,
-    borderRadius: theme.radius.md,
+    padding: "0 20px",
+    boxSizing: "border-box",
+    maxWidth: "1598px",
+    margin: "80px auto",
+
+    [theme.fn.smallerThan("md")]: {
+      padding: "0 0 0 31px",
+    },
 
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column",
-      padding: theme.spacing.xl,
     },
   },
 
   image: {
     width: "100%",
+    maxWidth: "1114px",
 
     [theme.fn.smallerThan("sm")]: {
       maxWidth: "100%",

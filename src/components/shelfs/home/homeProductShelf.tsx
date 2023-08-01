@@ -34,33 +34,32 @@ export const HomeProductShelf = () => {
         margin={mobile ? '40px 0 16px' : '80px 0 24px'}
         fontWeight={700}
       />
-
+      <span className='hidden' />
       <Carousel
         classNames={{ control: classes.carets }}
         className={classes.tipBar}
         draggable={false}
-        slideSize="40%"
+        slideSize="100%"
         breakpoints={[
-          { minWidth: '1024', slideSize: '20%', slideGap: 1 },
-          { maxWidth: '768', slideSize: '55%', slideGap: 10 },
-          { maxWidth: '600', slideSize: '70%', slideGap: 10 },
-          { maxWidth: '475', slideSize: '90%', slideGap: 10 },
+          { minWidth: '1024', slideSize: '19%', slideGap: 16 },
+          { maxWidth: 'md', slideSize: '80%', slideGap: 14 },
         ]}
         slideGap="sm"
         align="start"
         slidesToScroll={1}
         withIndicators={false}
-        inViewThreshold={1}
+        inViewThreshold={0.5}
         loop
+        withControls={mobile ? false : true}
         previousControlIcon={<img src={prevCaret} />}
         nextControlIcon={<img src={nextCaret} />}
+        controlsOffset={18}
       >
         {/* produto 1 -- que gambiarra tenebrosa */}
         <Carousel.Slide>
           <Card radius="md" padding="xl" className={classes.cardMain}>
             <Card.Section>
               <Carousel
-                withIndicators
                 withControls={false}
                 loop
                 classNames={{
@@ -100,7 +99,6 @@ export const HomeProductShelf = () => {
           <Card radius="md" padding="xl" className={classes.cardMain}>
             <Card.Section>
               <Carousel
-                withIndicators
                 withControls={false}
                 loop
                 classNames={{
@@ -140,7 +138,6 @@ export const HomeProductShelf = () => {
           <Card radius="md" padding="xl" className={classes.cardMain}>
             <Card.Section>
               <Carousel
-                withIndicators
                 withControls={false}
                 loop
                 classNames={{
@@ -180,7 +177,6 @@ export const HomeProductShelf = () => {
           <Card radius="md" padding="xl" className={classes.cardMain}>
             <Card.Section>
               <Carousel
-                withIndicators
                 withControls={false}
                 loop
                 classNames={{
@@ -220,7 +216,6 @@ export const HomeProductShelf = () => {
           <Card radius="md" padding="xl" className={classes.cardMain}>
             <Card.Section>
               <Carousel
-                withIndicators
                 withControls={false}
                 loop
                 classNames={{
@@ -260,7 +255,6 @@ export const HomeProductShelf = () => {
           <Card radius="md" padding="xl" className={classes.cardMain}>
             <Card.Section>
               <Carousel
-                withIndicators
                 withControls={false}
                 loop
                 classNames={{
@@ -300,7 +294,6 @@ export const HomeProductShelf = () => {
           <Card radius="md" padding="xl" className={classes.cardMain}>
             <Card.Section>
               <Carousel
-                withIndicators
                 withControls={false}
                 loop
                 classNames={{
@@ -340,7 +333,6 @@ export const HomeProductShelf = () => {
           <Card radius="md" padding="xl" className={classes.cardMain}>
             <Card.Section>
               <Carousel
-                withIndicators
                 withControls={false}
                 loop
                 classNames={{
@@ -380,7 +372,6 @@ export const HomeProductShelf = () => {
           <Card radius="md" padding="xl" className={classes.cardMain}>
             <Card.Section>
               <Carousel
-                withIndicators
                 withControls={false}
                 loop
                 classNames={{
@@ -420,7 +411,6 @@ export const HomeProductShelf = () => {
           <Card radius="md" padding="xl" className={classes.cardMain}>
             <Card.Section>
               <Carousel
-                withIndicators
                 withControls={false}
                 loop
                 classNames={{

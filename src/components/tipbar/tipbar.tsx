@@ -1,5 +1,3 @@
-import React from 'react';
-import Autoplay from 'embla-carousel-autoplay';
 import './styles.css';
 import tipBarIcon1 from '../../assets/Tipbar01.svg';
 import tipBarIcon2 from '../../assets/Tipbar02.svg';
@@ -31,7 +29,6 @@ const TIPBAR_CONTENT: Banner[] = [
 
 export const TipBar = () => {
   const { classes } = useTipBarCarouselStyles();
-  const autoplay = React.useRef(Autoplay({ delay: 3000, }));
 
   const tipBarContent = TIPBAR_CONTENT.map((item, index) => {
     return (
@@ -61,17 +58,15 @@ export const TipBar = () => {
         draggable={false}
         slideSize="40%"
         breakpoints={[
-          { minWidth: '1024', slideSize: '20%', slideGap: 10 },
-          { maxWidth: '768', slideSize: '55%', slideGap: 10 },
-          { maxWidth: '600', slideSize: '70%', slideGap: 10 },
-          { maxWidth: '475', slideSize: '90%', slideGap: 10 },
+          { minWidth: '1024', slideSize: '19%', slideGap: 16 },
+          { maxWidth: 'md', slideSize: '87%', slideGap: 15 },
+          { maxWidth: 'sm', slideSize: '85%', slideGap: 15 },
         ]}
         slideGap="sm"
         align="start"
         slidesToScroll={1}
-        inViewThreshold={0.1}
+        inViewThreshold={1}
         withControls={false}
-        plugins={[autoplay.current]}
         loop
       >
         {tipBarContent}
